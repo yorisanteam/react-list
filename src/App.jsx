@@ -12,6 +12,7 @@ import TurnMA from './components/TurnMA.jsx';
 import TurnYA from './components/TurnYA.jsx';
 import TurnRA from './components/TurnRA.jsx';
 import TurnWA from './components/TurnWA.jsx';
+import Sidebar from './components/Sidebar.jsx';
 import NotFound from './components/NotFound.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -19,22 +20,29 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/A" element={<TurnA />} />
-          <Route path="/KA" element={<TurnKA />} />
-          <Route path="/SA" element={<TurnSA />} />
-          <Route path="/TA" element={<TurnTA />} />
-          <Route path="/NA" element={<TurnNA />} />
-          <Route path="/HA" element={<TurnHA />} />
-          <Route path="/MA" element={<TurnMA />} />
-          <Route path="/YA" element={<TurnYA />} />
-          <Route path="/RA" element={<TurnRA />} />
-          <Route path="/WA" element={<TurnWA />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <div className='outside'>
+        <div className='sidebar'>
+          <Sidebar />
+        </div>
+      </div>
+      <div className='contents'>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/A" element={<TurnA />} />
+            <Route path="/KA" element={<TurnKA />} />
+            <Route path="/SA" element={<TurnSA />} />
+            <Route path="/TA" element={<TurnTA />} />
+            <Route path="/NA" element={<TurnNA />} />
+            <Route path="/HA" element={<TurnHA />} />
+            <Route path="/MA" element={<TurnMA />} />
+            <Route path="/YA" element={<TurnYA />} />
+            <Route path="/RA" element={<TurnRA />} />
+            <Route path="/WA" element={<TurnWA />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

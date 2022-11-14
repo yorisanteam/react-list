@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div>
+    <div className='home'>
         <div>Home</div>
         <div>
-            <p>{<Link to={'/A/'}>あ行へ</Link>}</p>
+            <p>{<Link to={'/A'}>あ行へ</Link>}</p>
             <p>{<Link to={'/KA'}>か行へ</Link>}</p>
             <p>{<Link to={'/SA'}>さ行へ</Link>}</p>
             <p>{<Link to={'/TA'}>た行へ</Link>}</p>
