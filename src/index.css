@@ -7,7 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.texts{
+  font-size: 15px;
+  background-color: aqua;
+}
+
+.red{
+  color: red;
+}
+
+.tableList{
+  padding:0;
+}
+
+.tableList li{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0px;
 }
