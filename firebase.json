@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source":"/query",
+        "function":"app"
+      },
+      {
+        "source":"/checkout",
+        "function":"app"
+      }
+    ],
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

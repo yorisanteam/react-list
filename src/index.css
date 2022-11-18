@@ -50,3 +50,8 @@ code {
 .home{
   padding-top:30px;
 }
+
+.li {
+  list-style: none;
+  float: left;
+}
