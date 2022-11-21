@@ -16,6 +16,7 @@ function Home() {
             <p>{<Link to={'/YA'}>や行へ</Link>}</p>
             <p>{<Link to={'/RA'}>ら行へ</Link>}</p>
             <p>{<Link to={'/WA'}>わ行へ</Link>}</p>
+            <p>{<Link to={'/Shelf'}>棚へ</Link>}</p>
         </div>
     </div>
   )

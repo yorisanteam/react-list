@@ -55,3 +55,28 @@ code {
   list-style: none;
   float: left;
 }
+
+.shelfContent{
+  margin-top:50px;
+}
+
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.list {
+  margin:5px;
+}
+
+.lists li{
+  list-style: none;
+  text-align: left;
+}
+
+.css-46bh2p-MuiCardContent-root:last-child{
+  padding:5px;
+  padding-bottom: 5px;
+}

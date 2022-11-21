@@ -16,6 +16,7 @@ function Sidebar(props) {
         <Button variant="contained" href="/YA/">や行へ</Button>
         <Button variant="contained" href="/RA/">ら行へ</Button>
         <Button variant="contained" href="/WA/">わ行へ</Button>
+        <Button variant="contained" href="/Shelf/">棚へ</Button>
         <Button variant="contained" href="/">HOMEへ</Button>
     </div>
   )
