@@ -48,7 +48,7 @@ code {
 }
 
 .home{
-  padding-top:30px;
+  margin-top:50px;
 }
 
 .li {
@@ -79,4 +79,9 @@ code {
 .css-46bh2p-MuiCardContent-root:last-child{
   padding:5px;
   padding-bottom: 5px;
+}
+
+
+.shelfEdit{
+  margin-top:50px;
 }

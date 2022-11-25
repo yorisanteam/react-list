@@ -14,6 +14,7 @@ import TurnRA from './components/TurnRA.jsx';
 import TurnWA from './components/TurnWA.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Shelf from './components/Shelf';
+import Edit from './components/Edit';
 import NotFound from './components/NotFound.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/RA" element={<TurnRA />} />
             <Route path="/WA" element={<TurnWA />} />
             <Route path="/Shelf" element={<Shelf />} />
+            <Route path="/Edit/*" element={<Edit />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
