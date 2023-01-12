@@ -2,14 +2,14 @@ import React from 'react';
 import { Link, } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { db } from '../firebase.js';
-import { collection, getDocs, } from 'firebase/firestore';
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 // import { styled } from '@mui/material/styles';
 // import IconButton from '@mui/material/IconButton';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
-// import DeleteIcon from '@mui/icons-material/Delete';
+import Button from '@mui/material/Button';
 
 
 // const ExpandMore = styled((props) => {
@@ -37,11 +37,11 @@ function Shelf() {
     },[]);
 
     // 削除ボタン
-    // const deleteComic = async (id) => {
-    //     const comicDocumentRef = doc(db,'shelfComic',id);
-    //     await deleteDoc(comicDocumentRef);
-    //     window.location.reload();
-    // }
+    const deleteComic = async (id) => {
+        const comicDocumentRef = doc(db,'shelfComic',id);
+        await deleteDoc(comicDocumentRef);
+        window.location.reload();
+    }
 
   return (
     <div className='shelfContent'>
@@ -78,7 +78,7 @@ function Shelf() {
                                         <Link to={'/Edit/' + shelf.id}>
                                             編集
                                         </Link>
-                                        {/* <Button size="small" color="error" variant="outlined" startIcon={<DeleteIcon />} onClick={() => deleteComic(shelf.id)}>削除</Button> */}
+                                        <button type="button" className="delButton" onClick={() => deleteComic(shelf.id)}>削除</button>
                                     </li>
                                 </ul>
                             </CardContent>

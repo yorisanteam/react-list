@@ -83,6 +83,11 @@ code {
   text-align: left;
 }
 
+.delButton{
+  height: 18px;
+  font-size: 1px;
+  margin-left: 16px;
+}
 
 
 .shelfEdit{
