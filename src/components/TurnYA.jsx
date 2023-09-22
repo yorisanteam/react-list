@@ -1,7 +1,7 @@
 import React from 'react';
 import ComicList from '../comiclist.json';
 
-function turnYA(props) {
+function turnYA() {
   let nameASIN = "https://www.amazon.co.jp/dp/";
     let Clist = [];
     let ClistA = [];

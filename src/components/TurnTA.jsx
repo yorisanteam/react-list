@@ -1,7 +1,7 @@
 import React from 'react';
 import ComicList from '../comiclist.json';
 
-function turnTA(props) {
+function turnTA() {
     let nameASIN = "https://www.amazon.co.jp/dp/";
     let Clist = [];
     let ClistTA = [];
