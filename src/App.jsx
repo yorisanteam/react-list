@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-// import ComicList from './comiclist.json';
 import Home from './components/Home.jsx';
 import TurnA from './components/TurnA.jsx';
 import TurnKA from './components/TurnKA.jsx';

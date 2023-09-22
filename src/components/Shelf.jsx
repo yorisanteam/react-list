@@ -6,22 +6,6 @@ import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-// import { styled } from '@mui/material/styles';
-// import IconButton from '@mui/material/IconButton';
-// import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-
-// const ExpandMore = styled((props) => {
-//     const { expand, ...other } = props;
-//     return <IconButton {...other} />;
-//   })(({ theme, expand }) => ({
-//     transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-//     marginLeft: 'auto',
-//     transition: theme.transitions.create('transform', {
-//       duration: theme.transitions.duration.shortest,
-//     }),
-//   }));
-
 
 function Shelf() {
     const [shelfComic, setShelfComic] = useState([]);
@@ -35,7 +19,6 @@ function Shelf() {
         });
     },[]);
 
-    // 削除ボタン
     const deleteComic = async (id) => {
         const comicDocumentRef = doc(db,'shelfComic',id);
         await deleteDoc(comicDocumentRef);
@@ -52,11 +35,6 @@ function Shelf() {
                     <div key={shelf.id} className="list">
                         <Card sx={{ maxWidth: 300, }}>
                             <CardHeader
-                                // action={
-                                // <IconButton aria-label="settings">
-                                //     <MoreVertIcon />
-                                // </IconButton>
-                                // }
                                 title={shelf.title}
                                 titleTypographyProps={{fontSize:"1rem",fontWeight:"700"}}
                                 subheader={"最終更新日：" + shelf.lastUpdateDay}

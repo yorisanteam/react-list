@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { db,} from '../firebase.js';
 import {doc, getDoc, setDoc, } from 'firebase/firestore'
 import { Link, } from 'react-router-dom';
-// import {collection, updateDoc, QuerySnapshot } from 'firebase/firestore'
 
 function Edit() {
     const [text, setText] = useState("");
@@ -20,15 +19,6 @@ function Edit() {
     const [note, setNote] = useState("");
     const [lastUpdateDay, setLastUpdateDay] = useState("");
     let urlid = window.location.pathname.split('/Edit')[1];
-
-    // useEffect(() => {
-    //     const shelfComicRef = collection(db, 'shelfComic');
-    //     getDocs(shelfComicRef).then((QuerySnapshot) => {
-    //         setShelfComic(
-    //             QuerySnapshot.docs.map((doc) => ({...doc.data(),id:doc.id }))
-    //         );
-    //     });
-    // },[]);
 
     useEffect(() => {
         if(urlid !== ""){
@@ -50,7 +40,6 @@ function Edit() {
             })
         }
     },[])
-
 
     if(urlid !== ""){
         urlid = urlid.split('/')[1]

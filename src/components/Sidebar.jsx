@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 
-function Sidebar(props) {
+function Sidebar() {
 
   return (
       <div className='Sidebar'>
